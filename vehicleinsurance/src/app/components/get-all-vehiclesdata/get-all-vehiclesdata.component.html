@@ -1,0 +1,48 @@
+<button class="btn-new" routerLink="/vehicledata">Add New Vehicle Data</button>
+<table>
+<thead>
+<tr>
+<th>Policy Number</th>
+ 
+<th>Vehicle Type</th>
+ 
+<th>Vehicle Registration Number</th>
+
+<th>Vehicle Model</th>
+
+<th>Registration State</th>
+
+<th>Model Year</th>
+
+<th>Action</th>
+ 
+</tr>
+ 
+</thead>
+ 
+<tbody>
+ 
+<tr *ngFor="let vehicle of vehicledata">
+
+ 
+<td>{{vehicle.policyNumber}}</td>
+ 
+<td>{{vehicle.vehicleType}}</td>
+ 
+<td>{{vehicle.vehicleRegistrationNumber}}</td>
+
+<td>{{vehicle.vehicleModel}}</td>
+
+<td>{{vehicle.registrationState}}</td>
+
+<td>{{vehicle.modelYear}}</td>
+
+<td>
+    <button class="btn-update" routerLink="/vehicledata/{{vehicle.id}}">Update</button>
+</td>
+</tr>
+ 
+</tbody>
+ 
+</table>
+
